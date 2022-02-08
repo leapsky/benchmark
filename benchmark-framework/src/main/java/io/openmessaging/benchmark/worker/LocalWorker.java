@@ -225,7 +225,6 @@ public class LocalWorker implements Worker, ConsumerCallback {
                             bytesSent.add(payloadData.length);
                             bytesSentCounter.add(payloadData.length);
 
-                            long latencyMicros = TimeUnit.NANOSECONDS.toMicros(System.nanoTime() - sendTime);
                             try {
                                 long latencyMicros = TimeUnit.NANOSECONDS.toMicros(System.nanoTime() - sendTime);
                                 publishLatencyRecorder.recordValue(latencyMicros);
